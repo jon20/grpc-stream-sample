@@ -9,4 +9,4 @@ message UploadRequest {
   bytes VideoData = 1;
 }
 
-message UploadReply { int64 UploadStatus = 1; }
+message UploadReply { string UploadStatus = 1; }
