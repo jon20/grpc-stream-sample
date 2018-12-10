@@ -16,8 +16,8 @@ func main() {
 
 	defer connect.Close()
 	uploadhalder := upload.NewUploadHandlerClient(connect)
-	strea, err := uploadhalder.Upload(context.Background())
-	err = Upload(strea)
+	stream, err := uploadhalder.Upload(context.Background())
+	err = Upload(stream)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -38,8 +38,10 @@ func Upload(stream upload.UploadHandler_UploadClient) error {
 		}
 		stream.Send(&upload.UploadRequest{VideoData: buf})
 	}
-	resp, _ := stream.CloseAndRecv()
-	aa := resp.GetUploadStatus
-	fmt.Println(aa)
+	resp, err := stream.CloseAndRecv()
+	if err != nil {
+		return err
+	}
+	fmt.Println(resp.UploadStatus)
 	return nil
 }
