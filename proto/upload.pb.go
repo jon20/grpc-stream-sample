@@ -34,7 +34,7 @@ func (m *UploadRequest) Reset()         { *m = UploadRequest{} }
 func (m *UploadRequest) String() string { return proto.CompactTextString(m) }
 func (*UploadRequest) ProtoMessage()    {}
 func (*UploadRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_upload_83780d20c255ea17, []int{0}
+	return fileDescriptor_upload_b4ceb81d91eb1b59, []int{0}
 }
 func (m *UploadRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UploadRequest.Unmarshal(m, b)
@@ -72,7 +72,7 @@ func (m *UploadReply) Reset()         { *m = UploadReply{} }
 func (m *UploadReply) String() string { return proto.CompactTextString(m) }
 func (*UploadReply) ProtoMessage()    {}
 func (*UploadReply) Descriptor() ([]byte, []int) {
-	return fileDescriptor_upload_83780d20c255ea17, []int{1}
+	return fileDescriptor_upload_b4ceb81d91eb1b59, []int{1}
 }
 func (m *UploadReply) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UploadReply.Unmarshal(m, b)
@@ -210,9 +210,9 @@ var _UploadHandler_serviceDesc = grpc.ServiceDesc{
 	Metadata: "upload.proto",
 }
 
-func init() { proto.RegisterFile("upload.proto", fileDescriptor_upload_83780d20c255ea17) }
+func init() { proto.RegisterFile("upload.proto", fileDescriptor_upload_b4ceb81d91eb1b59) }
 
-var fileDescriptor_upload_83780d20c255ea17 = []byte{
+var fileDescriptor_upload_b4ceb81d91eb1b59 = []byte{
 	// 145 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x29, 0x2d, 0xc8, 0xc9,
 	0x4f, 0x4c, 0xd1, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x83, 0xf0, 0x94, 0x74, 0xb9, 0x78,
